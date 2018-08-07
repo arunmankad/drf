@@ -326,7 +326,7 @@ export class DynamicformComponent implements OnInit {
         this.initForms();
       } else if (rule.type == 'enable') {
         console.log('WWWWWWWW');
-        obj[rule.affectedField].disabled = 'false';
+        delete obj[rule.affectedField].disabled;
         console.log(obj);
         obj[key].value = value;
         this.initForms();
